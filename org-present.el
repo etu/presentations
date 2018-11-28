@@ -3,7 +3,7 @@
 ;;; Code:
 
 (setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "/nix/var/nix/profiles/system/sw/bin/epiphany")
+      browse-url-generic-program "/nix/store/l31807cdd8fickj9mn8cxyzyx5yil04q-chromium-70.0.3538.102/bin/chromium")
 
 (eval-after-load "org-present"
   '(progn

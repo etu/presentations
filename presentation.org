@@ -29,7 +29,7 @@ between repositories and configuration formats over time.
 
 Website: [[https://magit.vc/][https://magit.vc/]]
 
-
+Graphical introduction to git: [[https://learngitbranching.js.org/][Learn Git Branching]]
 
 [ insert live demo here ]
 

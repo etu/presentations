@@ -4,5 +4,6 @@ mkShell {
   buildInputs = [
     screenkey
     tig
+    chromium
   ];
 }
