@@ -1,4 +1,9 @@
 * My shopping lists [1/1]
 ** DONE Week 47
+ - [ ] Corn
+ - [ ] Bananas
+ - [ ] Apples
+ - [ ] Potato
+
 ** Week 48
 ** Week 49
