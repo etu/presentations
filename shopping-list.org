@@ -4,6 +4,7 @@
  - [ ] Bananas
  - [ ] Apples
  - [ ] Potato
+ - [ ] Carrot
 
 ** Week 48
  - [ ] More
