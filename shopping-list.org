@@ -5,6 +5,7 @@
  - [ ] Apples
  - [ ] Potato
  - [ ] Carrot
+ - [ ] Pinapple
 
 ** Week 48
  - [ ] More
