@@ -1,0 +1,40 @@
+* Welcome to Stockholm Emacs Meetup: The Revival
+
+ - This is the 8th meetup in this groups history
+ - Last was held at 2016-12-07 by Nicolas
+ - I took ownership of the group 2018-04-21
+
+* Todays Schedule
+
+ - Elis Hirwing - Advanced and magic git usage in Emacs made simple
+ - Adisbladis - Managing emacs environments with nix
+ - Kim Lindberger - Using emacs as a C++ IDE
+ - Anders Lindgren - Some emacs packages
+ - Lightning talks where you can show highlights from your Emacs config
+
+* About me
+
+My name is Elis Hirwing and I live here in Stockholm.
+
+I've been using Emacs for about 10 years. Some parts of the configuration is
+probably almost the same as it was 10 years ago. But I've been migrating
+between repositories and configuration formats over time.
+
+* My modes
+
+ - [[https://github.com/etu/webpaste.el][webpaste.el]]
+ - [[https://github.com/etu/0blayout-mode][0blayout-mode]]
+
+* Magit -- A Git Porcelain inside Emacs
+
+Website: [[https://magit.vc/][https://magit.vc/]]
+
+
+
+[ insert live demo here ]
+
+* The end
+
+We plan to have the next meetup during the spring, but at this point in time
+we don't have a place to be or a date. But we'll keep you posted in the
+meetup group.
