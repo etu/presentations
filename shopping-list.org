@@ -6,4 +6,7 @@
  - [ ] Potato
 
 ** Week 48
+ - [ ] More
+ - [ ] Things
+
 ** Week 49
