@@ -5,24 +5,17 @@
 #+KEYWORDS:
 #+DATE:      March 20, 2019
 #+LANGUAGE:  en
-#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LaTeX_CLASS_OPTIONS: [aspectratio=43]
+#+BEAMER_THEME: default
+#+BEAMER_COLOR_THEME: default
+#+OPTIONS:   H:2 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
 #+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:https://orgmode.org/org-info.js
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
-#+LINK_UP:
-#+LINK_HOME:
-#+startup: beamer
-#+LaTeX_CLASS: beamer
-#+LaTeX_CLASS_OPTIONS: [presentation]
-#+BEAMER_FRAME_LEVEL: 1
-#+BEAMER_HEADER_EXTRA: \usetheme{default}\usecolortheme{default}
-#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
-#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
 
 * Introduction
 ** Who am I?
-*** Who am I?
  - Linux lover who mostly uses Emacs
  - Been using Linux since 2006, been using:
    - Ubuntu, OpenSUSE, Arch, Gentoo, CentOS, Exherbo, NixOS
@@ -31,46 +24,44 @@
  - NixOS member since last year
  - Maintainer of webpaste.el
 
-*** TV.nu
+** TV.nu
 Joined TV.nu about 3 years ago
 [[./tvnu-tvguide.png]]
 
-*** TV.nu
+** TV.nu
 We're hiring a full stack team lead for our front-end team:
 [[./tvnu-ad.png]]
 
 Contact me at [[mailto:eh@tv.nu][eh@tv.nu]] if you're interested.
 
 * EXWM
-** EXWM
-*** EXWM -- Emacs X11 Window Manager
+** EXWM -- Emacs X11 Window Manager
  - It's just Emacs
 
-*** EXWM -- Emacs X11 Window Manager
+** EXWM -- Emacs X11 Window Manager
  - It's just Emacs
    - For both good and bad...
 
-*** EXWM -- Emacs X11 Window Manager
+** EXWM -- Emacs X11 Window Manager
  - It's just Emacs
    - For both good and bad...
  - To begin with it was unimpressive and boring
 
-*** EXWM -- Emacs X11 Window Manager
+** EXWM -- Emacs X11 Window Manager
  - It's just Emacs
    - For both good and bad...
  - To begin with it was unimpressive and boring
  - Which makes it exciting
 
-*** EXWM -- Freshly started
+** EXWM -- Freshly started
 [[./exwm-plain.png]]
 
-*** EXWM -- Working on webpaste.el
+** EXWM -- Working on webpaste.el
 [[./exwm-webpaste.png]]
 
-*** EXWM -- Demo time
+** EXWM -- Demo time
 Demo time!
 
 * Questions
 ** Questions
-*** Questions
 [[./questions.png]]
