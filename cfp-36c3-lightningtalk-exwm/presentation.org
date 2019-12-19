@@ -1,0 +1,75 @@
+#+TITLE:     EXWM -- Emacs X11 Window Manager
+#+AUTHOR:    Elis Hirwing
+#+EMAIL:     elis@hirwing.se
+#+DESCRIPTION:
+#+KEYWORDS:
+#+DATE:      December 19, 2019
+#+LANGUAGE:  en
+#+LaTeX_CLASS_OPTIONS: [aspectratio=169]
+#+BEAMER_THEME: default
+#+BEAMER_COLOR_THEME: default
+#+OPTIONS:   H:2 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:https://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* Introduction
+** Who am I?
+ - FOSS advocate who lives in Stockholm
+ - Emacs and NixOS user
+ - Ham radio operator
+
+* EXWM
+** EXWM -- Emacs X11 Window Manager
+ - It's just Emacs
+
+** EXWM -- Emacs X11 Window Manager
+ - It's just Emacs, running full screen
+
+** EXWM -- Emacs X11 Window Manager
+ - It's just Emacs, running full screen, managing your graphical windows.
+
+** EXWM -- Emacs X11 Window Manager
+ - It's just Emacs, running full screen, managing your graphical windows.
+   - For both good and bad...
+
+** EXWM -- Emacs X11 Window Manager
+ - It's just Emacs, running full screen, managing your graphical windows.
+   - For both good and bad...
+ - To begin with it was unimpressive and boring
+
+** EXWM -- Freshly started
+[[./exwm-plain.png]]
+
+** EXWM -- Emacs X11 Window Manager
+ - It's just Emacs, running full screen, managing your graphical windows.
+   - For both good and bad...
+ - To begin with it was unimpressive and boring
+ - Which makes it exciting
+
+** EXWM -- Running graphical applications
+[[./exwm-firefox-term-pavu.png]]
+
+** EXWM -- Emacs X11 Window Manager
+ - It's just Emacs, running full screen, managing your graphical windows.
+   - For both good and bad...
+ - To begin with it was unimpressive and boring
+ - Which makes it exciting
+
+** EXWM -- Working on code
+[[./exwm-webpaste.png]]
+
+** EXWM -- Emacs X11 Window Manager
+ - It's just Emacs, running full screen, managing your graphical windows.
+   - For both good and bad...
+ - To begin with it was unimpressive and boring
+ - Which makes it exciting
+ - The future of EXWM
+
+* Year of the Linux/Emacs Desktop
+** Year of the Linux Desktop
+[[./year-of-the-linux-desktop.jpg]]
+
+** Year of the Emacs Desktop
+2019 is the year of the Emacs desktop!
