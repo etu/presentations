@@ -1,3 +1,3 @@
 #!/bin/sh
 
-emacs $1 --batch -f org-latex-export-to-pdf --kill
+emacs $1 --batch -f org-beamer-export-to-pdf --kill
