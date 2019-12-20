@@ -16,7 +16,7 @@
 
 * Introduction
 ** Who am I?
- - FOSS advocate who lives in Stockholm
+ - Long time Linux and FOSS user
  - Emacs and NixOS user
  - Ham radio operator
 
@@ -36,7 +36,6 @@
 
 ** EXWM -- Emacs X11 Window Manager
  - It's just Emacs, running full screen, managing your graphical windows.
-   - For both good and bad...
  - To begin with it was unimpressive and boring
 
 ** EXWM -- Freshly started
@@ -44,7 +43,6 @@
 
 ** EXWM -- Emacs X11 Window Manager
  - It's just Emacs, running full screen, managing your graphical windows.
-   - For both good and bad...
  - To begin with it was unimpressive and boring
  - Which makes it exciting
 
@@ -53,7 +51,6 @@
 
 ** EXWM -- Emacs X11 Window Manager
  - It's just Emacs, running full screen, managing your graphical windows.
-   - For both good and bad...
  - To begin with it was unimpressive and boring
  - Which makes it exciting
 
@@ -62,7 +59,6 @@
 
 ** EXWM -- Emacs X11 Window Manager
  - It's just Emacs, running full screen, managing your graphical windows.
-   - For both good and bad...
  - To begin with it was unimpressive and boring
  - Which makes it exciting
  - The future of EXWM
