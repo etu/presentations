@@ -73,3 +73,12 @@
 
 ** Year of the Emacs Desktop
 2019 is the year of the Emacs desktop!
+
+* Contact
+** Contact
+ - DECT: 5173
+ - Mastodon: sa0bse@chaos.social
+ - IRC: etu on most big networks
+ - XMPP/Email: etu@failar.nu
+ - Website/Blog: https://elis.nu/
+ - Callsign: SAØBSE
