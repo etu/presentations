@@ -70,7 +70,7 @@
  - The future of EXWM.
 
 ** EXWM -- The future
-[[./service-unavailable-503.png]]
+[[./404-not-found.png]]
 
 * Year of the Linux/Emacs Desktop
 ** Year of the Linux Desktop
