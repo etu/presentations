@@ -69,12 +69,21 @@
 ** EXWM -- The future
  - The future of EXWM.
 
+** EXWM -- The future
+[[./service-unavailable-503.png]]
+
 * Year of the Linux/Emacs Desktop
 ** Year of the Linux Desktop
 [[./year-of-the-linux-desktop.jpg]]
 
 ** Year of the Emacs Desktop
 2019 is the year of the Emacs desktop!
+
+* Conclusions
+** Conclusions
+ - EXWM is a perfectly decent window manager for long time Emacs users.
+ - My experience is most often: "Works good enough for me".
+ - The future of something like EXWM on Wayland doesn't exist at the moment.
 
 * Contact
 ** Contact
