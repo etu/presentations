@@ -17,12 +17,14 @@ let
     ;
   });
 
+  # Get emacs with some extra packages
   myEmacs = emacsWithPackages(epkgs: with epkgs; [
     org
     ox-gfm
     use-package
   ]);
 
+  # Needed for pdflatex export whith code highlighting
   myPython = python3.withPackages(ps: with ps; [
     pygments
   ]);
