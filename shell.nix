@@ -11,13 +11,26 @@ let
 
       # Needed on top of scheme-medium
       capt-of wrapfig
+
+      # Packages needed for supporting colored code highlighting
+      minted fvextra fancyvrb upquote lineno xstring framed float
     ;
   });
 
+  myEmacs = emacsWithPackages(epkgs: with epkgs; [
+    org
+    ox-gfm
+    use-package
+  ]);
+
+  myPython = python3.withPackages(ps: with ps; [
+    pygments
+  ]);
+
 in mkShell {
   buildInputs = [
-    emacs
-    gnumake
+    myEmacs
+    myPython
     myTexlive
   ];
 }
