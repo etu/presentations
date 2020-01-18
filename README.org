@@ -1,0 +1,12 @@
+* Repo of presentation slides I've held in public
+All the presentations are written in org-mode and then exported to beamer
+slides using texlive.
+
+All the deps and configuration needed to build these presentations are
+embedded within the repository and you can use the provided =build.sh= file
+to build any presentation within the repo by typing something like:
+#+BEGIN_SRC sh
+./build.sh directory-name/presentation.org
+#+END_SRC
+
+Then you get a file named =directory-name/presentation.pdf=.
