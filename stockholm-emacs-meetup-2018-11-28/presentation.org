@@ -1,32 +1,46 @@
-* Welcome to Stockholm Emacs Meetup: The Revival
+#+TITLE:     Stockholm Emacs Meetup: The Revival
+#+AUTHOR:    Elis Hirwing
+#+EMAIL:     elis@hirwing.se
+#+DESCRIPTION:
+#+KEYWORDS:
+#+DATE:      November 28, 2018
+#+LANGUAGE:  en
+#+LaTeX_CLASS_OPTIONS: [aspectratio=169]
+#+BEAMER_THEME: default
+#+BEAMER_COLOR_THEME: whale
+#+OPTIONS:   H:2 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:https://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
 
+* Welcome & Schedule
+** Welcome to Stockholm Emacs Meetup: The Revival
  - This is the 8th meetup in this groups history
  - Last was held at 2016-12-07 by Nicolas
  - I took ownership of the group 2018-04-21
 
-* Todays Schedule
-
+** Todays Schedule
  - Elis Hirwing - Advanced and magic git usage in Emacs made simple
  - Adisbladis - Managing emacs environments with nix
  - Kim Lindberger - Using emacs as a C++ IDE
  - Anders Lindgren - Some emacs packages
  - Lightning talks where you can show highlights from your Emacs config
 
-* About me
-
+* Introduction
+** Who am I?
 My name is Elis Hirwing and I live here in Stockholm.
 
 I've been using Emacs for about 10 years. Some parts of the configuration is
 probably almost the same as it was 10 years ago. But I've been migrating
 between repositories and configuration formats over time.
 
-* My modes
-
+** My modes
  - [[https://github.com/etu/webpaste.el][webpaste.el]]
  - [[https://github.com/etu/0blayout-mode][0blayout-mode]]
 
-* Magit -- A Git Porcelain inside Emacs
-
+* Magit
+** Magit -- A Git Porcelain inside Emacs
 Website: [[https://magit.vc/][https://magit.vc/]]
 
 Graphical introduction to git: [[https://learngitbranching.js.org/][Learn Git Branching]]
@@ -34,7 +48,7 @@ Graphical introduction to git: [[https://learngitbranching.js.org/][Learn Git Br
 [ insert live demo here ]
 
 * The end
-
+** The end
 We plan to have the next meetup during the spring, but at this point in time
 we don't have a place to be or a date. But we'll keep you posted in the
 meetup group.
