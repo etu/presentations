@@ -1,0 +1,221 @@
+#+TITLE:     The Nix Ecosystem -- A brief overview
+#+AUTHOR:    Elis Hirwing
+#+EMAIL:     elis@hirwing.se
+#+DESCRIPTION:
+#+KEYWORDS:
+#+DATE:      January 07, 2020
+#+LANGUAGE:  en
+#+LaTeX_CLASS_OPTIONS: [aspectratio=169]
+#+BEAMER_THEME: default
+#+BEAMER_COLOR_THEME: whale
+#+OPTIONS:   H:2 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:https://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+#+LocalWords: SRC LaTeX NixOS Backend Eelco Dolstra TiB pre direnv lang
+#+LocalWords: Nixery NixOps config pkgs macOS FreeBSD myTexlive texlive
+#+LocalWords: ec etoolbox eurosym ulem wrapfig mkShell buildInputs emacs
+#+LocalWords: gnumake npm pypi vgo
+
+* Introduction
+** Who am I?
+ - About 14 years of Linux desktop experience
+ - About 3 years of NixOS experience
+ - Has commit/merge access to Nixpkgs
+
+** I'm here to talk about Nix
+[[./nix-snowflake.png]]
+
+* Agenda
+** Agenda
+ - Nixpkgs
+ - Nix
+ - NixOS
+ - Nix ecosystem
+
+* Nixpkgs
+** Nixpkgs
+It is:
+ - A repository that consists of nix code to describe software builds
+
+** Nixpkgs
+It is:
+ - A repository that consists of nix code to describe software builds
+ - One of the worlds largest software repositories
+
+** Nixpkgs -- Repology stats
+[[./repology-stats.png]]
+
+** Nixpkgs -- Github stats
+Past month nixpkgs has seen 1342 merged pull requests, 191 closed issues and
+in total: 356 authors have published 2580 commits to master. Excluding merges.
+
+[[./github-overview.png]]
+
+Past year the overall activity per week have peaked at 1216 commits and dipped
+at 312 commits.
+
+** Nixpkgs
+It is:
+ - A repository that consists of nix code to describe software builds
+ - One of the worlds largest software repositories
+
+It's not:
+ - A software archive for unmaintained or out of date software
+
+* Nix
+** Nix -- Agenda
+ - Nix project origins
+ - Stichting NixOS Foundation
+ - Package manager
+ - Nix Store
+ - Generations
+
+** Nix -- Project origins
+ - NixOS initial release 2003 by Eelco Dolstra
+
+** Nix -- Stichting NixOS Foundation
+ - Owns all domains and core server infrastructure
+ - Controlled by an elected board
+ - The build farm (Hydra builds about 350k builds every week)
+ - The binary cache (120+TiB pre-compiled packages)
+
+** Nix -- Package manager
+ - Aims to be: Reproducible
+ - By being: Declarative
+ - To achieve: Determinism
+
+** Nix -- Nix Store
+ - The Nix Store
+
+** Nix -- Nix Store
+ - The Nix Store
+   - Package conflicts doesn't exist
+   - Version conflicts doesn't exist
+   - Circular dependencies doesn't exist
+
+** Nix -- Nix Store
+ - The Nix Store
+ - Example file system layout
+
+#+BEGIN_SRC
+/nix/store/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-first-package-name-X.Y.Z/...
+/nix/store/yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-second-package-name-X.Y.Z/...
+/nix/store/zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-third-package-name-X.Y.Z/...
+#+END_SRC
+
+** Nix -- Generations
+ - What is a generation?
+
+** Nix -- Generations
+ - What is a generation?
+ - Atomic upgrades
+
+** Nix -- Generations
+ - What is a generation?
+ - Atomic upgrades
+ - Rollbacks
+
+* NixOS
+** NixOS
+ - Linux distribution built on Nix & Nixpkgs
+
+** NixOS
+ - Linux distribution built on Nix & Nixpkgs
+ - Module system for service configuration
+
+** NixOS -- Module example
+#+BEGIN_SRC nix
+{ config, pkgs, ... }:
+
+{
+  services.openssh.enable = true;
+  services.openssh.passwordAuthentication = false;
+
+  # services.openssh.ports = [ 22 ];
+  # services.openssh.allowSFTP = true;
+  # services.openssh.ciphers = [ ... ];
+
+  # services.openssh.extraConfig = "...";
+}
+#+END_SRC
+
+** NixOS
+ - Linux distribution built on Nix & Nixpkgs
+ - Module system for service configuration
+ - Full system generations, deploys, rollbacks and boot generations
+
+* Nix ecosystem
+** Nix ecosystem -- Agenda
+ - Different platforms
+ - Development environments
+ - Language tooling
+ - Building and deploying Docker images
+ - Operations using Nix
+
+** Nix ecosystem -- Platform support
+ - Platform support
+   - Linux
+   - Darwin / macOS
+   - FreeBSD (early stages)
+
+** Nix ecosystem -- Development environments
+ - Platform support
+ - Nix Shell / Direnv
+
+** Nix ecosystem -- Development environment example
+#+BEGIN_SRC nix
+with (import <nixpkgs> {});
+
+let
+  myTexlive = (texlive.combine {
+    inherit (texlive) scheme-basic
+      # Needed on top of scheme-basic
+      beamer ec etoolbox eurosym translator ulem
+      cm-super capt-of wrapfig;
+  });
+
+in mkShell {
+  buildInputs = [ emacs gnumake myTexlive ];
+}
+#+END_SRC
+
+** Nix ecosystem -- Language tooling
+ - Platform support
+ - Nix Shell / Direnv
+ - Language tooling
+   - node2nix
+   - poetry2nix
+   - pypi2nix
+   - vgo2nix
+
+** Nix ecosystem -- Docker
+ - Platform support
+ - Nix Shell / Direnv
+ - Language tooling
+ - Nix Docker tools
+   - Building Images with pure Nix
+   - Nixery (Docker repository)
+
+** Nix ecosystem -- Operations
+ - Platform support
+ - Nix Shell / Direnv
+ - Language tooling
+ - Nix Docker tools
+ - NixOps
+
+* Conclusions
+** Conclusions
+ - Nix is a huge ecosystem for building and managing applications
+ - Nix has a proven track record and is here to stay
+ - Nix is very flexible and can be a good tool for users, developers & operations
+
+* Contact
+** Contact
+ - Mastodon: sa0bse@chaos.social
+ - IRC: etu @ most big networks
+ - XMPP/Email: etu@failar.nu
+ - Website/Blog: https://elis.nu/
+ - Callsign: SAØBSE
