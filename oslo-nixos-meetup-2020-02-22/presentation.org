@@ -25,15 +25,24 @@
  - About 3 years of NixOS experience
  - Has commit/merge access to Nixpkgs
 
-** I'm here to talk about Nix
-[[./nix-snowflake.png]]
-
 * Agenda
 ** Agenda
+*** Agenda
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+
  - Nixpkgs
  - Nix
  - NixOS
  - Nix ecosystem
+
+*** Nix Logo
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+
+[[./nix-snowflake.png]]
 
 * Nixpkgs
 ** Nixpkgs
