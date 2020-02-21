@@ -55,6 +55,10 @@ It is:
  - One of the worlds largest software repositories
 
 ** Nixpkgs -- Repology stats
+*** Nixpkgs -- Repology stats
+:PROPERTIES:
+:BEAMER_col: 0.65
+:END:
 [[./repology-stats.png]]
 
 ** Nixpkgs -- Github stats
