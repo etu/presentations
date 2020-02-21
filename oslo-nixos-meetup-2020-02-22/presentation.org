@@ -62,12 +62,26 @@ It is:
 [[./repology-stats.png]]
 
 ** Nixpkgs -- Github stats
-Past month nixpkgs has seen 1342 merged pull requests, 191 closed issues and
-in total: 356 authors have published 2580 commits to master. Excluding merges.
+Past month nixpkgs has seen 1945 merged pull requests, 229 closed issues and
+in total: 386 authors have published 3288 commits to master. Excluding merges.
 
-[[./github-overview.png]]
+*** Github stats image
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+[[./github-stats.png]]
 
-Past year the overall activity per week have peaked at 1216 commits and dipped
+*** Github commits image
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+[[./github-commits.png]]
+
+*** Bottom text
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:END:
+Past year the overall activity per week have peaked at 1239 commits and dipped
 at 312 commits.
 
 ** Nixpkgs
