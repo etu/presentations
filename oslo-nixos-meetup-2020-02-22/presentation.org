@@ -3,7 +3,7 @@
 #+EMAIL:     elis@hirwing.se
 #+DESCRIPTION:
 #+KEYWORDS:
-#+DATE:      January 07, 2020
+#+DATE:      February 22, 2020
 #+LANGUAGE:  en
 #+LaTeX_CLASS_OPTIONS: [aspectratio=169]
 #+BEAMER_THEME: default
