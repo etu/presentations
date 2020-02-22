@@ -243,6 +243,7 @@ in mkShell {
 ** Contact
  - Mastodon: sa0bse@chaos.social
  - IRC: etu @ most big networks
+ - GitHub: github.com/etu
  - XMPP/Email: etu@failar.nu
  - Website/Blog: https://elis.nu/
  - Callsign: SAØBSE
