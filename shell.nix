@@ -10,7 +10,7 @@ let
       cm-super
 
       # Needed on top of scheme-medium
-      capt-of wrapfig
+      capt-of wrapfig catchfile
 
       # Packages needed for supporting colored code highlighting
       minted fvextra fancyvrb upquote lineno xstring framed float
