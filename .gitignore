@@ -1,4 +1,6 @@
-*.tex
-*.tex~
-*.pdf
-_minted-presentation
+# Ignore build symlinks
+result*
+.tmp
+
+# Ignore direnv cache
+.direnv/
