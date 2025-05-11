@@ -23,7 +23,7 @@
 
           nativeBuildInputs = [
             # Build emacs with extra packages for beamer exports
-            (pkgs.emacsWithPackages (epkgs:
+            (pkgs.emacs.pkgs.withPackages (epkgs:
               with epkgs; [
                 org
                 ox-gfm
