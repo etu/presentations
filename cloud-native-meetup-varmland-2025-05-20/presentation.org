@@ -1,0 +1,258 @@
+#+TITLE:  Nix what?
+#+AUTHOR: Elis Hirwing
+#+EMAIL:  elis@hirwing.se
+#+DESCRIPTION:
+#+KEYWORDS:
+#+DATE:      May 20, 2025
+#+LANGUAGE:  en
+#+LaTeX_CLASS_OPTIONS: [aspectratio=169]
+#+BEAMER_THEME: default
+#+BEAMER_COLOR_THEME: whale
+#+OPTIONS:   H:2 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:https://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* Introduction
+** Who am I?
+ - About 19 years of Linux desktop experience
+ - About 8 years of NixOS experience
+ - Has commit/merge access to Nixpkgs
+ - Works with local cloud, devops, development as lead backend developer at TV.nu
+
+* Agenda 1
+** Agenda
+*** Agenda
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+
+ - Nix
+ - Nixpkgs
+ - NixOS
+ - Nix and cloud?
+
+*** Nix Logo
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+
+[[./nix-snowflake.png]]
+
+* Nix
+** Nix terminology
+#+BEGIN_CENTER
+Let's get this straight... :D
+#+END_CENTER
+
+** Nix terminology
+*** Nix terminology
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+
+[[./nix-is-not-is-not-is-not.png]]
+
+** Nix -- a quick summary
+ - Based upon the PHD thesis named "The Purely Functional Software Deployment
+   Model" by Eelco Dolstra.
+
+** Nix -- a quick summary
+ - Based upon the PHD thesis named "The Purely Functional Software Deployment
+   Model" by Eelco Dolstra.
+ - NixOS was initially released in 2003 by Eelco Dolstra, nix (the package
+   manager is slightly older).
+
+** Nix -- a quick summary
+ - Based upon the PHD thesis named "The Purely Functional Software Deployment
+   Model" by Eelco Dolstra.
+ - NixOS was initially released in 2003 by Eelco Dolstra, nix (the package
+   manager is slightly older).
+ - Has a foundation based in the Netherlands that owns and manages the
+   infrastructure with builders, caches forums and community.
+
+* Agenda 2
+** Agenda
+*** Agenda
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+
+ - +Nix+
+ - Nixpkgs
+ - NixOS
+ - Nix and cloud?
+
+*** Nix Logo
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+
+[[./nix-snowflake.png]]
+
+* Nixpkgs
+** Nixpkgs
+It is:
+ - A repository that consists of nix code to describe software builds
+
+** Nixpkgs
+It is:
+ - A repository that consists of nix code to describe software builds
+ - One of the worlds largest software repositories
+
+** Nixpkgs -- Repology stats (2025-05-11)
+
+[[./repology-stats.png]]
+
+** Nixpkgs
+It is:
+ - A repository that consists of nix code to describe software builds
+ - One of the worlds largest software repositories
+ - A huge set of system modules for how to set up software
+
+* Agenda 3
+** Agenda
+*** Agenda
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+
+ - +Nix+
+ - +Nixpkgs+
+ - NixOS
+ - Nix and cloud?
+
+*** Nix Logo
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+
+[[./nix-snowflake.png]]
+
+* NixOS
+** NixOS - Why?
+#+BEGIN_CENTER
+Why is this important for a cloud native meetup?
+#+END_CENTER
+
+** NixOS - NixOS Modules
+#+BEGIN_CENTER
+Why is this important for a cloud native meetup?
+#+END_CENTER
+
+#+BEGIN_CENTER
+Here's where the real magic of Nix & Nixpkgs comes in.
+#+END_CENTER
+
+** NixOS - NixOS Modules
+#+BEGIN_SRC nix
+{ config, pkgs, ... }:
+
+{
+  services.openssh.enable = true;
+  services.openssh.passwordAuthentication = false;
+
+  # services.openssh.ports = [ 22 ];
+  # services.openssh.allowSFTP = true;
+  # services.openssh.ciphers = [ ... ];
+
+  # services.openssh.extraConfig = "...";
+}
+#+END_SRC
+
+* Agenda 4
+** Agenda
+*** Agenda
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+
+ - +Nix+
+ - +Nixpkgs+
+ - +NixOS+
+ - Nix and cloud?
+
+*** Nix Logo
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+
+[[./nix-snowflake.png]]
+
+* Nix and cloud?
+** Nix and cloud?
+#+BEGIN_CENTER
+/Nix strength is to build software in isolation and try to get closer to
+reproducible builds and deliver in the format the user needs./
+#+END_CENTER
+
+** Let's talk about docker
+
+ - Docker is pretty much a brand name for a quite lacking implementation to
+   build OCI images.
+
+** Let's talk about docker
+
+ - Docker is pretty much a brand name for a quite lacking implementation to
+   build OCI images.
+ - The ~Dockerfile~ is easy to mess up to make insecure or unreproducible
+   builds that will break in the future.
+
+** On the Dockerfile
+
+#+BEGIN_SRC dockerfile
+FROM alpine:latest
+
+RUN apk update && apk install hello
+
+COPY program.sh .
+
+CMD ./program.sh
+#+END_SRC
+
+** Let's a similar OCI image with nix
+
+#+BEGIN_SRC nix
+pkgs.dockerTools.buildImage {
+  name = "my-program-image";
+  tag = "latest";
+  copyToRoot = pkgs.buildEnv {
+    name = "image-root";
+    paths = [ pkgs.coreutils pkgs.hello ];
+    pathsToLink = [ "/bin" ];
+  };
+  runAsRoot = ''
+    mkdir -p /app
+    cp ${./program.sh} /app/program.sh
+    chmod +x /app/program.sh
+  '';
+  config.Cmd = [ "/app/program.sh" ];
+}
+#+END_SRC
+
+* Agenda 5
+** Agenda
+*** Agenda
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+
+ - +Nix+
+ - +Nixpkgs+
+ - +NixOS+
+ - +Nix and cloud?+
+
+*** Nix Logo
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+
+[[./nix-snowflake.png]]
+
+* Questions?
+** Questions?
+
+ - Personal email: elis@hirwing.se
+ - Personal contacts: https://elis.nu/about
+ - My company website: https://taserud.net

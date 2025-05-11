@@ -110,6 +110,7 @@
         oslo-nixos-meetup-2020-02-22 = buildEmacsBeamerSlides "oslo-nixos-meetup-2020-02-22" ./oslo-nixos-meetup-2020-02-22 "presentation.org";
         stockholm-emacs-meetup-2018-11-28 = buildEmacsBeamerSlides "stockholm-emacs-meetup-2018-11-28" ./stockholm-emacs-meetup-2018-11-28 "presentation.org";
         stockholm-emacs-meetup-2019-03-20 = buildEmacsBeamerSlides "stockholm-emacs-meetup-2019-03-20" ./stockholm-emacs-meetup-2019-03-20 "presentation.org";
+        cloud-native-meetup-varmland-2025-05-20 = buildEmacsBeamerSlides "cloud-native-meetup-varmland-2025-05-20" ./cloud-native-meetup-varmland-2025-05-20 "presentation.org";
       };
     });
 }
